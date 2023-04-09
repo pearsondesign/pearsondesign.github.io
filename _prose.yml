@@ -1,6 +1,6 @@
 prose:
   rooturl: '/'
-  siteurl: 'http:s//pearsondesign.co'
+  siteurl: 'https://pearsondesign.co'
   media: 'static'
   ignore:
     - bable.config.js
