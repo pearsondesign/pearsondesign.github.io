@@ -1,6 +1,6 @@
 prose:
-  rooturl: '/'
   siteurl: 'https://pearsondesign.co'
+  relativeLinks: 'https://pearsondesign.co/links.jsonp'
   media: 'static'
   ignore:
     - bable.config.js
