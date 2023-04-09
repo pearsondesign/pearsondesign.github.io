@@ -1,8 +1,11 @@
 ---
 sidebar_position: 1
+published: true
 ---
 
 # Tutorial Intro
+
+Testing
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
