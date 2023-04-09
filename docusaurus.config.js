@@ -10,7 +10,7 @@ const projectName = "pearsondesign.github.io";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Pearson Design",
-  tagline: "Dinosaurs are cool",
+  tagline: "How much wood could a woodchuck chuck if a woodchuck could chuch wood?",
   url: `http://pearsondesign.co`,
   baseUrl: `/`,
   onBrokenLinks: "warn",
@@ -54,9 +54,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "My Site",
+        title: "Pearson Design",
         logo: {
-          alt: "My Site Logo",
+          alt: "Pearson Design",
           src: "img/logo.svg",
         },
         items: [
@@ -64,14 +64,9 @@ const config = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Tutorial",
+            label: "Projects",
           },
           { to: "/blog", label: "Blog", position: "left" },
-          {
-            href: `https://github.com/${organizationName}/${projectName}`,
-            label: "GitHub",
-            position: "right",
-          },
         ],
       },
       footer: {

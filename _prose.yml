@@ -12,4 +12,4 @@ prose:
     - tsconfig.json
     - yarn.lock
     - _prose.yml
-    - /.github
+    - .github/
