@@ -10,7 +10,7 @@ const projectName = "pearsondesign.github.io";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Pearson Design",
-  tagline: "How much wood could a woodchuck chuck if a woodchuck could chuch wood?",
+  tagline: "How much wood could a woodchuck chuck if a woodchuck could chuck wood?",
   url: `http://pearsondesign.co`,
   baseUrl: `/`,
   onBrokenLinks: "warn",
