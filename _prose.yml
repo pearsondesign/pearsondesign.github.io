@@ -1,0 +1,15 @@
+prose:
+  rooturl: '/'
+  siteurl: 'http:s//pearsondesign.co'
+  media: 'static'
+  ignore:
+    - bable.config.js
+    - CNAME
+    - docusaurus.config.js
+    - LICENSE
+    - package.json
+    - sidebar.js
+    - tsconfig.json
+    - yarn.lock
+    - _prose.yml
+    - /.github
