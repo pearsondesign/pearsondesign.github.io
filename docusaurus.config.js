@@ -73,10 +73,10 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Projects",
             items: [
               {
-                label: "Tutorial",
+                label: "View Projects",
                 to: "/docs/intro",
               },
             ],
@@ -107,12 +107,12 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: `https://github.com/${organizationName}/${projectName}`,
+                href: `https://github.com/${organizationName}/`,
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Pearson Design Co. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
