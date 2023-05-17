@@ -7,6 +7,10 @@ published: true
 
 Testing 1234
 
+```cpp
+std::cout << std::format("Hello world {}\n", 123);
+```
+
 Let's discover **Docusaurus in less than 5 minutes**.
 
 ## Getting Started
