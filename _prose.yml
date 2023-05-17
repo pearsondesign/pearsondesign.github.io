@@ -1,7 +1,6 @@
 prose:
-  siteurl: 'https://pearsondesign.co'
   relativeLinks: 'https://pearsondesign.co/links.jsonp'
-  media: 'static'
+  media: '/static/img/'
   ignore:
     - bable.config.js
     - CNAME
@@ -13,3 +12,4 @@ prose:
     - yarn.lock
     - _prose.yml
     - .github/
+    - src/
