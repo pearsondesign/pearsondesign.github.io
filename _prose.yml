@@ -1,6 +1,7 @@
 prose:
   relativeLinks: 'https://pearsondesign.co/links.jsonp'
-  media: '/static/img/'
+  media: 'static/img'
+  rooturl: 'content'
   ignore:
     - bable.config.js
     - CNAME
