@@ -3,6 +3,7 @@ published: true
 id: doclist
 slug: /list
 title: Project List
+sidebar-position: 1
 ---
 # Pearson Design
 
