@@ -1,6 +1,8 @@
 ---
-sidebar_position: 1
 published: true
+id: doclist
+slug: /list
+title: Project List
 ---
 # Pearson Design
 
