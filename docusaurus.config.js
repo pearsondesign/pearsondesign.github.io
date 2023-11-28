@@ -38,11 +38,10 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve("./sidebars.js"),
         },
-        blog: {
-          showReadingTime: true,
-        },
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -65,8 +64,7 @@ const config = {
             docId: "intro",
             position: "left",
             label: "Projects",
-          },
-          { to: "/blog", label: "Blog", position: "left" },
+          }
         ],
       },
       footer: {
@@ -77,7 +75,7 @@ const config = {
             items: [
               {
                 label: "View Projects",
-                to: "/docs/intro",
+                to: "/intro",
               },
             ],
           },
@@ -101,10 +99,6 @@ const config = {
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
               {
                 label: "GitHub",
                 href: `https://github.com/${organizationName}/`,
