@@ -3,6 +3,6 @@ published: true
 title: WLED Controller
 ---
 
-:::warning
-Coming Soon
+:::warning[Under Construction]
+This page is currently under construction.  Please check back later.
 :::
