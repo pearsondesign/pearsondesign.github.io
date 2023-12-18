@@ -51,7 +51,7 @@ You'll need the following components, along with a custom PCB and some 3D prints
 
 The board design is pretty simple.  I had 25 boards manufactured by [JLCPCB](https://jlcpcb.com) for less than $10 (including shipping).  Other competitive services exist for PCB manufacturing however, so do your research before picking one.
 
-The gerber files can be downloaded [here](./assets/gerber_files.zip).  You'll need to input these files into the 
+The gerber files can be downloaded [here](./assets/gerber_files.zip).  You'll need to input these files into whatever service you use for manufacturing.
 
 ### 3D Prints
 
