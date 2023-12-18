@@ -27,3 +27,8 @@
   --ifm-color-primary-lighter: #b9a58a;
   --ifm-color-primary-lightest: #c9b9a5;
 }
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
