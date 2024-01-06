@@ -15,7 +15,7 @@ const config = {
   baseUrl: `/`,
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.png",
   // GitHub Pages adds a trailing slash by default that I don't want
   trailingSlash: false,
 
@@ -57,43 +57,18 @@ const config = {
         logo: {
           alt: "Pearson Design",
           src: "img/logo.svg",
-        },
-        items: [
-          {
-            type: "doc",
-            docId: "doclist",
-            position: "left",
-            label: "Projects",
-          }
-        ],
+        }
       },
       footer: {
         style: "dark",
         links: [
           {
-            title: "Projects",
-            items: [
-              {
-                label: "View Projects",
-                to: "/list",
-              },
-            ],
-          },
-          {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
+                label: "YouTube",
+                href: "https://www.youtube.com/@PearsonDesign-qn7sx",
+              }
             ],
           },
           {
@@ -102,7 +77,16 @@ const config = {
               {
                 label: "GitHub",
                 href: `https://github.com/${organizationName}/`,
-              },
+              }
+            ],
+          },
+          {
+            title: "Contact",
+            items: [
+              {
+                label: "Email",
+                href: 'mailto:contact@pearsondesign.co'
+              }
             ],
           },
         ],
@@ -112,6 +96,9 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      metadata: [
+        {name: "theme-color", content: "#7f6c53"}
+      ]
     }),
 };
 

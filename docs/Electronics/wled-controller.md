@@ -1,11 +1,9 @@
 ---
 published: true
 title: WLED Controller
+type: doc
+id: wled-controller
 ---
-
-:::warning
-This page is currently under construction.
-:::
 
 <iframe width="100%" src="https://www.youtube.com/embed/hE9B4bpsDIw" title="WLED Controller | DIY LED Strip Controller" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -24,6 +22,8 @@ I also just enjoy a good challenge.
 
 :::danger
 I am not an electrical engineer.  This board design has flaws, only some of which are known by me.  Use with caution.
+
+There are a plethora of other WLED controller boards out there, most of which are probably better designed than this one.  This project is just for fun, and shouldn't be used for any critical LED controlling operations.
 :::
 
 ## Parts List
@@ -86,3 +86,30 @@ Couple of known problems with this board design:
     * Some of these solder joints are harder than they need to be, should've made the pads bigger;
 * JST connectors point straight up:
     * If I redesign this board, the JST connectors will be the 90 degree variety;
+
+Other issues (based on YouTube feedback, which I'm thankful for):
+
+* Missing logic-level shifter:
+    * While I've never ran into any issues with the WS2812b lighting strips (BTF-Lightning brand), official WLED documentation recommends usage of a logic level shifter, given that the esp8266 outputs a 3.3v signal, and the led strips operate on 5v;
+* Usage of an ESP32:
+    * ESP8266s can get a bit slow on WLED (and in my experience are more prone to crashing), plus OTA update support would be nice;
+
+
+### V3 Planning
+
+While the next version of this board is still early in the planning phase, there are a few things I want to do differently:
+
+* SMD ESP32 module:
+    * Rather than purchasing expensive-ish ESP8266 boards, you can order ESP32 SOCs and SMD solder them.  Services like JLCPCB have these in their inventory, and can even perform the assembly for cheap.  This would decrease the assembly complexity (for me), and provide a significantly more powerful MCU;
+    * This would additionally remove the USB port and unnecessary hardware.  Instead, I'd need to add UART headers and flash the firmware with a programmer, which is acceptable;
+    * I'd have to design the board to be almost completely single-sided. Since the V2 board uses spacers with THT components to keep everything compact, this would be a design challenge;
+* Horizontal JST headers:
+    * The board would look a bit better if the output headers were horizontal, then the wiring wouldn't stick up so high;
+* LED voltage independence:
+    * It would be nice if I could decouple the MCU voltage from the LED strip voltage, allowing the same board to run 12v strips.  This can probably just be done with a 3.3v voltage regulator on the input side, then a logic level shifter for the data transmission pin;
+    * This would make it so that if you wanted to run 12v strips, just plug in a 12v strip and power the controller with 12v.  For 5v strips, just use a 5v supply & strip.  No need to configure a jumper or anything to select the appropriate voltage;
+    * I need to perform more research on appropriate components.  Most ESP32 packages have a pretty small current consumption on their own, so the voltage regulator should be straightforward;
+* Different fuse size:
+    * The current fuses I'm using are cheap and easy to source, but are rated in high AC current, which doesn't nicely convert to 5v dc.  I could go the route of automotive fuses, as the 12v is much easier to convert, but will need to source some holder components and find a cheap supply of fuses.  I went with the current fuse holders due to their relatively small size, and I'd like to keep that;
+
+Lastly, I don't want to copy any other board designs.  I didn't reference any other boards when designing this, or even the WLED documentation (which I probably should have).  This project is simply meant to be an exercise, to grow my skills in an area that I am unfamiliar with.

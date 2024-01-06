@@ -1,9 +1,8 @@
 ---
 published: true
-id: doclist
-slug: /list
-title: Project List
-sidebar-position: 1
+id: index
+slug: /
+title: Home
 ---
 # Pearson Design
 
