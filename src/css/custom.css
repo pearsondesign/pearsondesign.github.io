@@ -4,6 +4,9 @@
  * work well for content-centric websites.
  */
 
+ @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #7f6c53;
@@ -26,6 +29,10 @@
   --ifm-color-primary-light: #b49e82;
   --ifm-color-primary-lighter: #b9a58a;
   --ifm-color-primary-lightest: #c9b9a5;
+}
+
+:root {
+  --ifm-font-family-base: 'Nunito';
 }
 
 iframe {
