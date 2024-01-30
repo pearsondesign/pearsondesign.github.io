@@ -19,6 +19,7 @@ const config = {
   // GitHub Pages adds a trailing slash by default that I don't want
   trailingSlash: false,
 
+  
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName, // Usually your GitHub org/user name.
@@ -31,12 +32,15 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
-      "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      '@docusaurus/preset-classic',
+      {
+        gtag:
+        {
+          trackingID: 'G-JJ8YRXB1E8',
+          anonymizeIP: true,
+        },
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve("./sidebars.js"),
@@ -45,13 +49,14 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-      }),
+      },
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      
       navbar: {
         title: "Pearson Design",
         logo: {
@@ -72,6 +77,10 @@ const config = {
               {
                 label: "Instagram",
                 href: "https://www.instagram.com/pearsondesign.co/"
+              },
+              {
+                label: "Twitter",
+                href: "https://twitter.com/pearsondesignco"
               }
         
             ],
