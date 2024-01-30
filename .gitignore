@@ -1,5 +1,7 @@
 *_original
 
+.frontmatter
+
 # Dependencies
 /node_modules
 
