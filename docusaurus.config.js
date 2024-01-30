@@ -68,7 +68,12 @@ const config = {
               {
                 label: "YouTube",
                 href: "https://www.youtube.com/@PearsonDesign-qn7sx",
+              },
+              {
+                label: "Instagram",
+                href: "https://www.instagram.com/pearsondesign.co/"
               }
+        
             ],
           },
           {

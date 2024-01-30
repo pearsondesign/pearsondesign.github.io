@@ -94,6 +94,28 @@ Other issues (based on YouTube feedback, which I'm thankful for):
 * Usage of an ESP32:
     * ESP8266s can get a bit slow on WLED (and in my experience are more prone to crashing), plus OTA update support would be nice;
 
+### Logic Level Shifter
+
+:::warning
+Remember, I'm not an electrical engineer, nor do I really know how to use an oscilloscope.
+:::
+
+In order to test how necessary a logic-level shifter is, I hooked up my new oscilloscope.
+
+![](./assets/Scope.jpg)
+
+Channel 1 (yellow, `3.36v`) is hooked up to the data pin on the microcontroller (the data input side of the first LED).
+Channel 2 (green, `4.8v`) is reading the data pin _after_ the first LED.
+
+This test shows that the LED strip (from BTF-Lighting) is receiving a 3.3v data signal, but outputting the next signal at 5 volts.  According to these results, shifting the 3.3v data output from ESP8266 to 5v will not have any adverse affects across distance/LED count, provided that the first LED receives adequate power.  
+
+My concern prior to testing this is that the data voltage would drop across the length of the strip, causing data loss over long distances.  Since each LED re-transmits the signal at full 5v however, this is not a concern (provided supplemental power is added).
+
+Data loss should only occur if the initial signal from the ESP8266 is below the voltage threshold that the first LED triggers at.  This may occur if the wiring between the controller and the LED strip is excessively long, however this would result in a complete failure to control any of the LEDs.  Further testing would be required to determine the exactly the minimum voltage required to control these WS2812b LEDs.
+
+:::note
+I wrote the above before doing any research, as I was interested in reverse engineering the WS2812b protocol as an exercise.  The internet seems to agree with these findings however.
+:::
 
 ### V3 Planning
 
